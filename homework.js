@@ -57,8 +57,8 @@ true + undefined
 // 1. Если переменная равна “hidden”, присвоить ей значение “visible”, иначе - “hidden”.
 
 let variable = 'visible';
-if (variable==='hidden') {
-	variable = 'visible';
+if (variable === 'hidden') {
+	variable = 'visible'
 } else {
 	variable = 'hidden'
 }
@@ -70,13 +70,11 @@ if (variable==='hidden') {
 
 variable = - 15;
 if (variable === 0) {
-	variable = '1';
-};
-if (variable < 0) {
-	variable = 'less then zero';
-};
-if (variable > 0) {
-	variable = variable *= 10;
+	variable = '1'
+} else if (variable < 0) {
+	variable = 'less then zero'
+} else {
+	variable = variable *= 10
 };
 
 // 3. 	Дан объект let car = { name: 'Lexus', age: 10, create: 2008, needRepair: false }. 
@@ -108,13 +106,8 @@ let item = {
 	discount: '15'
 };
 if (item.discount) {
-	item = {
-		name: 'Intel core i7',
-		price: '100$',
-		discount: '15%',
-		priceWithDiscount: parseInt(item.price,10) - parseInt(item.price,10) * parseInt(item.discount,10) / 100 + '$',
-	};
-		console.log(item.priceWithDiscount)
+	item.priceWithDiscount = parseInt(item.price,10) - parseInt(item.price,10) * parseInt(item.discount,10) / 100 + '$',
+	console.log(item.priceWithDiscount)
 } else {
 	console.log(item.price);
 }
@@ -167,7 +160,7 @@ switch (a) {
 	// 1. Если переменная равна “hidden”, присвоить ей значение “visible”, иначе - “hidden”.
 
 variable = 'visible';
-variable === 'hidden' ? variable = 'visible' : variable = 'hidden';
+variable = variable === 'hidden' ? 'visible' : 'hidden';
 
 	// 2.Используя if, записать условие:
 	// a. если переменная равна нулю, присвоить ей 1;
@@ -175,9 +168,8 @@ variable === 'hidden' ? variable = 'visible' : variable = 'hidden';
 	// c. если больше нуля - используя оператор “присвоение”, переменную умножить на 10 (использовать краткую запись).
 
 variable = - 15;
-variable === 0 ? variable = '1' : 
-	variable < 0 ? variable = 'less then zero':
-	variable = variable *= 10;
+variable = variable === 0 ? '1' : variable < 0 ? 'less then zero': variable *= 10;
+console.log(variable);
 
 // 3. 	Дан объект let car = { name: 'Lexus', age: 10, create: 2008, needRepair: false }. 
 //		Написать условие если возраст машины больше 5 лет то нужно вывести в консоль сообщение 
